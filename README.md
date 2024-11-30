@@ -16,8 +16,14 @@
 * GitHub
 * Metasploit
 ### Hydra
-`hydra -L useranme.txt -P passwords.txt IP/DOMAIN_NAME http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid creds or something"`
+`hydra -L useranme.txt -P passwords.txt IP/DOMAIN_NAME http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid creds or something" -V -f`
 >Login form brute-forcing
+
+`hydra -l user -P list.lst IP smtps -V -f`
+>SMTP/S Brute-forcing
+
+`hydra -l user -P list.lst ssh://IP -V -f`
+>SSH Brute-forcing
 
 ## PRIVESC
 #### Shell stabilization
