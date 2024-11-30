@@ -7,7 +7,7 @@
 `ffuf -u http://IP/FUZZ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -e .php,.js,.html,.txt -ac` with extensions 
 #### Other extensions that could be used: .cfg, .bak, .json, etc.
 ### Dirsearch
-``
+`dirsearch -u http://IP`
 ### Sqlmap
 `sqlmap -u http://IP --forms`
 #### Depending on the situation, `--level=` and `--risk=` can be used
