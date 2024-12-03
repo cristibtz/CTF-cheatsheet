@@ -44,6 +44,9 @@ fg
 ### Find SUID binaries
 `find / -perm -u=s -type f 2>/dev/null`
 
+### Find files with writable permissions
+`find / -writable -type  f 2>/dev/null | grep -v "/proc/"`
+
 ### List all capabilities recursively
 `getcap -r / 2>/dev/null`
 
