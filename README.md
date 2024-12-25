@@ -36,7 +36,7 @@ export TERM=xterm
 ```
 #### Background session
 ```
-stty -raw echo
+stty raw -echo
 fg
 ```
 #### Foreground back to victim
