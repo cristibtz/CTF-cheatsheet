@@ -30,14 +30,20 @@
 
 ## PRIVESC
 ### Shell stabilization
+Victim:
 ```
-python3 -c 'import pty; pty.spawn("/bin/bash");'
-export TERM=xterm
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm256-color
+CTRL+Z
 ```
-#### Background session
+Attacker:
 ```
-stty raw -echo
-fg
+stty size
+stty raw -echo;fg
+```
+Victim:
+```
+stty rows 36 columns 120
 ```
 #### Foreground back to victim
 
